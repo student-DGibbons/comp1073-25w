@@ -10,25 +10,39 @@
 	<h1>String Methods</h1>
 	<p>JavaScript output to go here.</p>
     <script>
-        var output = document.querySelector('p');
+        const output = document.querySelector('p');
         
         /* STEP 1: String Length */
-
+        let step1a = "Hello, everyone";
+        let step1b = step1a.length;
+        console.log(step1b); //outputs 16
 
         /* STEP 2: Retrieving a Specific String Character */
+        let step2 = step1a[0];
+        output.textContent = step2;
 
+        let step2b = step1a[step1a.length - 1];
+        output.textContent = step2b;
 
         /* STEP 3: Extracting Part of a String */
+        let step3a = step1a.indexOf("everyone");
+        console.log(step3a);
+        let step3b = step1a.slice(step3a, step1a.length);
+        console.log(step3b);
 
         // Note - if the substring is not found within the string, indexOf() returns -1
 
         // Note - if you don't specify where to end the slice, the method returns the rest of the string
 
         /* STEP 4: Changing Case */
-
+        let step4a = step3b.toUpperCase();
+        console.log(step4a);
+        let step4b = step4a.toLowerCase();
+        console.log(step4b);
 
         /* STEP 5: Updating Parts of a String */
-        
+        let step5 = step1a.replace("everyone", "firefighters");
+        console.log(step5);
 
     </script>
 </body>

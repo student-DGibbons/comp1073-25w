@@ -14,24 +14,40 @@
     const output = document.querySelector('p');
     
     /* STEP 1: Creating Strings */
+    let step1 = "Hello, world";
+    let step1a = `This is a string. ${step1}.`;
 
+    output.textContent = step1a;
     
     // Note - whether you use 'single' or "double" quotes is a personal preference - try to be consistent
 
-    /* STEP 2: Escaping Characters */
+    /* STEP 2: Escaping Characters (i.e., \ to get passed the extra double quotes issue) */
+
+    let step2 = "Scott says, \"You're a mean one, Mr. Grinch\"";
+    output.textContent = step2;
 
 
     /* STEP 3: Concatenation */
 
+    let step3a = "Hello";
+    let step3b = "World";
+    let step3c = step3a + ", " + step3b;
+    output.textContent = step3c;
+
+    output.textContent = `${step3a}, ${step3b}!`;
 
     /* STEP 4: Numbers and Strings */
-
+    let step4a = "Farenheit " + 451;
+    console.log(step4a);
+    
     // numbers can be converted to strings
-
+    let step4b = 2025;
+    console.log(typeof(step4b));
+    let step4c = String(step4b);
+    console.log(typeof(step4c));
     // strings can be converted to numbers, too
-
+    let step4d = Number(step4c);
+    console.log(typeof(step4d));
     // and back again, if we want
-
-
 </script>
 </html>
