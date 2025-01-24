@@ -68,7 +68,6 @@ Without the ability to edit the contents of an array, this type of variable woul
 
 let orig6Length = orig6Array.push("Buffalo Sabres", "Philadelphia Flyers");
 
-
 // Removing an item from an array with pop()
 let removedItem = orig6Array.pop();
 
