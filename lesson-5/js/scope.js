@@ -1,14 +1,32 @@
 // STEP 1: Declare and initialize a global variable (x = 1)
+let x = 1;
 
 
 // STEP 2: Build a function that accepts no parameters, and also declares and intializes a variable within it (y = 2)
+function a(){
+    let y = 2;
+    console.log(`x + y = ${x + y}`);
+    output(y);
+    // output(y) is defined below
+}
 
+a();
 
 // STEP 3: Build another function that also accepts no parameters, and also declares and intializes a variable within it (z = 3)
-
+function b(){
+    let z = 3;
+    console.log(`y + z = ${y + z}`);
+    // Creates an error since y isn't available w/in this codeblock (it's local to the a() function)
+}
 
 // STEP 4: Analyze the following function that accepts a value, then creates an H2 element, injects it into the DOM, then sets the content to the value of the parameter passed into it when in was called (invoked)
+function output(value){
+    const elem = document.createElement("h2");
+    document.body.appendChild(elem);
+    elem.textContent = (`The value of the variable is ${value}`);
+}
 
+// output(x);
 
 /* STEP 5: Punch the following directly into the console:
 output(x)
@@ -43,9 +61,18 @@ Bear in mind that you can call a function from within another function at any ti
 
 // STEP 7a: Build a primary function that declares and initializes a variable, then calls up a subfunction
 
+function mainFunction(){
+    let myValue = 1;
+    subFunction(myValue);
+}
+
 // STEP 7b: Create a sub-function that logs the value of myValue to the console
 
+function subFunction(passedInVar){
+    console.log(`myValue = ${passedInVar}`);
+}
 // STEP 7c: Call up mainFunction() in your console directly after refreshing the page in the browser
+mainFunction(7);
 
 // STEP 7d: The subfunction cannot access myValue - so pass myValue as a parameter into subFunction(), and update the function to accept the parameter, renaming it simply, 'value' - update the console.log() method as well, then reload the page and enter mainFunction() again in the browser
 
