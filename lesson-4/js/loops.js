@@ -4,8 +4,17 @@ const msg = document.querySelector('#courses');
 /* STEP 1a: A simple FOR loop
 A simple loop of this structure needs an initializer (counter variable), an exit conditional, and and incrementor/decrementor */
 
+
+for(let i=0;i<courses.length; i++){
+	if(i === courses.length - 1){
+		// Finish sentence properly
+		courseList += ` and ${courses[i]}.`;
+	} else {
+		courseList += `${courses[i]}, `;
+	}
+}
+
 msg.textContent = courseList;
-// STEP 1b: Add a conditional for the last item in the array so we can finish the sentence with a period.
 
 /* STEP 2: Exit a loop with break */
 let cities = ['Toronto', 'Montreal', 'Ottawa', 'Vancouver', 'Halifax'];
