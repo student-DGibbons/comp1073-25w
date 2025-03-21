@@ -16,15 +16,37 @@
       "image" : "chocolate-mint.svg"
     },
     {
-      "name" : "Perfect Peach Mango",
-      "calories" : 350,
+      "name" : "Raspberry Lime",
+      "calories" : 500,
       "type" : "sorbet",
       "ingredients" : [
-        "peach purée",
-        "mango chunks",
-        "clover honey"
+        "lime",
+        "raspberry",
+        "sprinkles"
       ],
-      "image" : "peach-mango.svg"
+      "image" : "ice-cream-xtra1.svg"
+    },
+    {
+      "name" : "Carmel Chocolate",
+      "calories" : 800,
+      "type" : "rocky road",
+      "ingredients" : [
+        "chocolate chunks",
+        "carmel flavouring",
+        "heavy cream"
+      ],
+      "image" : "ice-cream-xtra1.svg"
+    },
+    {
+      "name" : "Strawberry Sprinkle",
+      "calories" : 700,
+      "type" : "sorbet",
+      "ingredients" : [
+        "strawberrys",
+        "sprinkles",
+        "chocolate dip"
+      ],
+      "image" : "strawberry-sprinkle.svg"
     }
   ]
 }
