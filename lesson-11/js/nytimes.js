@@ -1,7 +1,7 @@
 // The URL for the Article Search API at nytimes.com
 const baseURL = 'https://api.nytimes.com/svc/search/v2/articlesearch.json';
 // STEP 1: Get your own API key and paste it below…
-const key = '';
+const key = 'H3AkJ4M0qONZ1bG2NSPSxmXle0g84wy4';
 let url;
 // Grab references to all the DOM elements you'll need to access
 const searchTerm = document.querySelector('.search');
@@ -11,17 +11,23 @@ const searchForm = document.querySelector('form');
 const submitBtn = document.querySelector('.submit');
 const section = document.querySelector('section');
 // STEP 2: Add a submit event listener for the search form, referencing the fetchResults function as the callback
-
+searchForm.addEventListener("submit", fetchResults);
 
 // Functions
 function fetchResults(event) {
     // Use preventDefault() to stop the form submitting
     event.preventDefault();
     // STEP 3: Assemble the full URL, according to the API documentation at the New York Times
-    
-
+    url = `${baseURL}?api-key=${key}&q=${searchTerm.value}&fq=document_type:("article")`;
+    // Add start and end dates if needed
+    if(startDate.value !==""){
+        url += `&being_date=${startDate.value.replaceAll("-", "")}`;
+    };
+    if(endDate.value !==""){
+        url += `&end_date=${endDate.value.replaceAll("-", "")}`;
+    };
     // STEP 4: Use fetch() to pass the URL that we built as a request to the API service, then pass the JSON to the displayResults() function
-    
+    console.log(url);    
 
 };
 
